@@ -1,4 +1,4 @@
-
+<?php
 
 function wp_vtheme_scripts() {
 
