@@ -4,7 +4,8 @@
 
 
 function vtheme_setup(){
-
+    
+add_theme_support('title-tag');
 
 }
 
