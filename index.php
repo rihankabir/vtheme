@@ -5,7 +5,20 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1 class="text-light"><a href="index.html"><span>Vespa</span></a></h1>
+        <?php if(has_custom_logo()){
+          the_custom_logo();
+        }else{
+          ?>
+          <h2>
+<a href="<?php echo home_url(); ?>">
+
+<?php bloginfo('name'); ?>
+
+</a>
+</h2>
+<?php
+        } ?>
+        
         <!-- Uncomment below if you prefer to use an image logo -->
          <!-- <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
