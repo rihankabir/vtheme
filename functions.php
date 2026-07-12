@@ -1,5 +1,34 @@
 <?php
 
+// Theme setup
+
+
+function vtheme_setup(){
+
+
+}
+
+
+add_action(
+    'after_setup_theme',
+    'vtheme_setup'
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function wp_vthemes_scripts() {
 
    
