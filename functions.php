@@ -1,10 +1,8 @@
 <?php
 
-// Theme setup
 
 
 function vtheme_setup(){
-
 
 add_theme_support('custom-logo');
 add_theme_support('title-tag');
