@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Vespa</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" rel="icon">
-  <link href="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-<?php wp_head(); ?>
-</head>
-<body>
+<?php get_header() ; ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -782,33 +763,4 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-6 text-lg-left text-center">
-          <div class="copyright">
-            &copy; Copyright <strong>Vespa</strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            Designed by <a href="#">Bootstrap</a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
-            <a href="#about" class="scrollto">About</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-<?php wp_footer(); ?>
-</body>
-
-</html>
+  <?php get_footer() ; ?>
