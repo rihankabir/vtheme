@@ -18,6 +18,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
+<?php wp_body_open(); ?>
 
  <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
@@ -42,15 +43,17 @@
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+       <?php
+       wp_nav_menu(
+        array(
+            'theme_location' => 'primary_menu',
+            'menu_class' => 'nav-menu',
+            'container' => false,
+            'fallback_cb'    => false,
+        )
+       );
+       
+       ?>
       </nav><!-- .nav-menu -->
 
     </div>
