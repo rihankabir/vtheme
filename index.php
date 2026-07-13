@@ -7,6 +7,8 @@
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
+
+    <?php get_template_part('template-parts/client'); ?>
     <!-- End Clients Section -->
 
     <!-- ======= About Us Section ======= -->
