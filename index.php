@@ -12,6 +12,7 @@
     <!-- End Clients Section -->
 
     <!-- ======= About Us Section ======= -->
+     <?php get_template_part('template-parts/about'); ?>
     <!-- End About Us Section -->
 
     <!-- ======= Counts Section ======= -->
