@@ -14,6 +14,15 @@ $wp_customize -> add_setting(
         'sanitize_callback' => 'sanitize_text_field',
     )
 );
+$wp_customize -> add_control(
+'vtheme_phone',array(
+    'label' => 'Phone Number',
+    'section' => 'vtheme_contact_section',
+    'type' => 'text',
+)
+
+);
+
 
 }
 
