@@ -22,6 +22,12 @@ $wp_customize -> add_control(
 )
 
 );
+$wp_customize -> add_setting(
+    'vtheme_email',array(
+        'default' => 'vtheme20@gmail.com',
+        'sanitize_callback' => 'sanitize_email',
+    )
+);
 
 
 }
