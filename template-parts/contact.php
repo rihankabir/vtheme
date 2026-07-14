@@ -34,7 +34,7 @@
 
               <div>
                 <i class="ri-phone-line"></i>
-                <p>+1 5589 55488 55s</p>
+                <p><?php echo esc_html(get_theme_mod('vtheme_phone')); ?> </p>
               </div>
 
             </div>
