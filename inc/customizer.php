@@ -28,6 +28,14 @@ $wp_customize -> add_setting(
         'sanitize_callback' => 'sanitize_email',
     )
 );
+$wp_customize -> add_control(
+'vtheme_email',array(
+    'label' => 'Email Address',
+    'section' => 'vtheme_contact_section',
+    'type' => 'email',
+)
+
+);
 
 
 }
