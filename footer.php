@@ -5,7 +5,7 @@
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
-            &copy; Copyright <strong>Vespa</strong>. All Rights Reserved
+            &copy; <?php echo date('Y'); ?> Copyright <strong>Vtheme</strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
