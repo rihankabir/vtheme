@@ -32,6 +32,7 @@
     <!-- End Features Section -->
 
     <!-- ======= Testimonials Section ======= -->
+     <?php get_template_part('template-parts/testimonial') ?>
     <!-- End Testimonials Section -->
 
     <!-- ======= Portfolio Section ======= -->
