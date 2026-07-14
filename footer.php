@@ -5,11 +5,11 @@
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
-            &copy; <?php echo date('Y'); ?> Copyright <strong>Vtheme</strong>. All Rights Reserved
+            &copy; <?php echo date('Y'); ?> Copyright <strong><?php bloginfo('name'); ?></strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
-            Designed by <a href="#">Bootstrap</a>
+            Designed by <a href="#">Rihanul Kabir</a>
           </div>
         </div>
         <div class="col-lg-6">
