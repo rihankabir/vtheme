@@ -40,6 +40,7 @@
     <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
+     <?php get_template_part('template-parts/team'); ?>
     <!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
