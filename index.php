@@ -48,6 +48,7 @@
     <!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
+     <?php get_template_part('template-parts/faq'); ?>
     <!-- End F.A.Q Section -->
 
     <!-- ======= Contact Section ======= -->
