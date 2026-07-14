@@ -32,10 +32,11 @@
     <!-- End Features Section -->
 
     <!-- ======= Testimonials Section ======= -->
-     <?php get_template_part('template-parts/testimonial') ?>
+     <?php get_template_part('template-parts/testimonial'); ?>
     <!-- End Testimonials Section -->
 
     <!-- ======= Portfolio Section ======= -->
+     <?php get_template_part('template-parts/portfolio'); ?>
     <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
