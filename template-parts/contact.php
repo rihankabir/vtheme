@@ -29,7 +29,7 @@
 
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p>info@example.com</p>
+                <p><?php echo esc_html(get_theme_mod('vtheme_email')); ?> </p>
               </div>
 
               <div>
