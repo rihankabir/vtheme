@@ -44,6 +44,7 @@
     <!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
+     <?php get_template_part('template-parts/pricing'); ?>
     <!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
