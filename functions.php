@@ -1,6 +1,6 @@
 <?php
 
-
+require_once get_template_directory() . '/inc/customizer.php';
 
 function vtheme_setup(){
 
