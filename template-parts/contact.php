@@ -4,9 +4,7 @@
         <div class="section-title" data-aos="fade-up">
           <h2>Contact Us</h2>
         </div>
-
         <div class="row">
-
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
               <h3>Vespa</h3>
@@ -19,7 +17,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="info">
               <div>
