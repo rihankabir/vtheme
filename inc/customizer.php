@@ -75,6 +75,19 @@ $wp_customize -> add_control(
         'type' => 'url',
     )
 );
+$wp_customize -> add_setting(
+    'vtheme_linkedin',array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    )
+);
+$wp_customize -> add_control(
+    'vtheme_linkedin',array(
+        'label' => 'Linkedin URL',
+        'section' => 'vtheme_contact_section',
+        'type' => 'url',
+    )
+);
 
 }
 

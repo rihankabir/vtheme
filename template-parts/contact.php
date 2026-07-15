@@ -13,7 +13,7 @@
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_twitter')); ?> " class="twitter"><i class="icofont-twitter"></i></a>
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_facebook')); ?> " class="facebook"><i class="icofont-facebook"></i></a>
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_instagram')); ?> " class="instagram"><i class="icofont-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                <a href="<?php echo esc_html(get_theme_mod('vtheme_linkedin')); ?> " class="linkedin"><i class="icofont-linkedin"></i></a>
               </div>
             </div>
           </div>
