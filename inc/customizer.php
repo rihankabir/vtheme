@@ -55,7 +55,13 @@ $wp_customize -> add_setting(
         'sanitize_callback' => 'esc_url_raw',
     )
 );
-
+$wp_customize -> add_control(
+    'vtheme_twitter',array(
+        'label' => 'Twitter URL',
+        'section' => 'vtheme_contact_section',
+        'type' => 'url',
+    )
+);
 
 
 }
