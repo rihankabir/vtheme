@@ -36,7 +36,12 @@ $wp_customize -> add_control(
 )
 
 );
-
+$wp_customize -> add_setting(
+    'vtheme_facebook',array(
+        'default' => '',
+         'sanitize_callback' => 'esc_url_raw',
+    )
+);
 
 }
 
