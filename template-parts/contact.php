@@ -21,7 +21,7 @@
             <div class="info">
               <div>
                 <i class="ri-map-pin-line"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p><?php echo esc_html(get_theme_mod('vtheme_location')); ?> </p>
               </div>
 
               <div>

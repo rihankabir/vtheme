@@ -88,6 +88,19 @@ $wp_customize -> add_control(
         'type' => 'url',
     )
 );
+$wp_customize -> add_setting(
+    'vtheme_location',array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+$wp_customize -> add_control(
+    'vtheme_location',array(
+        'label' => 'Location Address',
+        'section' => 'vtheme_contact_section',
+        'type' => 'text',
+    )
+);
 
 }
 
