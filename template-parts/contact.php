@@ -8,7 +8,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
               <h3>Vespa</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <p><?php echo esc_html(get_theme_mod('footer_text')); ?> </p>
               <div class="social-links">
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_twitter')); ?> " class="twitter"><i class="icofont-twitter"></i></a>
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_facebook')); ?> " class="facebook"><i class="icofont-facebook"></i></a>

@@ -101,6 +101,19 @@ $wp_customize -> add_control(
         'type' => 'text',
     )
 );
+$wp_customize -> add_setting(
+    'footer_text',array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+$wp_customize -> add_control(
+    'footer_text',array(
+        'label' => 'Footer Text',
+        'section' => 'vtheme_contact_section',
+        'type' => 'text',
+    )
+);
 
 }
 
