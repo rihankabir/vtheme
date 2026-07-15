@@ -12,7 +12,7 @@
               <h3>Vespa</h3>
               <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
               <div class="social-links">
-                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="<?php echo esc_html(get_theme_mod('vtheme_twitter')); ?> " class="twitter"><i class="icofont-twitter"></i></a>
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_facebook')); ?> " class="facebook"><i class="icofont-facebook"></i></a>
                 <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
                 <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
