@@ -62,7 +62,12 @@ $wp_customize -> add_control(
         'type' => 'url',
     )
 );
-
+$wp_customize -> add_setting(
+    'vtheme_instagram',array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    )
+);
 
 }
 
