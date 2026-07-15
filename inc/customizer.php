@@ -42,6 +42,14 @@ $wp_customize -> add_setting(
          'sanitize_callback' => 'esc_url_raw',
     )
 );
+$wp_customize -> add_control(
+    'vtheme_facebook',array(
+        'label' => 'Facebook URL',
+        'section' => 'vtheme_contact_section',
+        'type' => 'url',
+    )
+);
+
 
 }
 
