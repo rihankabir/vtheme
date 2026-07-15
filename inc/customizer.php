@@ -68,6 +68,13 @@ $wp_customize -> add_setting(
         'sanitize_callback' => 'esc_url_raw',
     )
 );
+$wp_customize -> add_control(
+    'vtheme_instagram',array(
+        'label' => 'Instagram URL',
+        'section' => 'vtheme_contact_section',
+        'type' => 'url',
+    )
+);
 
 }
 
