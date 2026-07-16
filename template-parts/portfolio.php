@@ -38,6 +38,7 @@
               <div class="portfolio-info">
                 <h4>App 1</h4>
                 <p>App</p>
+                
                 <div class="portfolio-links">
                   <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                 </div>

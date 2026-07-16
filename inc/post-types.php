@@ -48,6 +48,7 @@ register_post_type(
             'show_in_rest' => true,
     )
 );
+
 register_post_type(
     'portfolio',
     array(
@@ -63,6 +64,23 @@ register_post_type(
             'thumbnail',
         ),
         'show_in_rest' => true,
+    )
+);
+
+register_taxonomy(
+    'portfolio_category',
+    'portfolio',
+    array(
+        'labels' => array(
+            'name'          => __('Portfolio Categories', 'vtheme'),
+            'singular_name' => __('Portfolio Category', 'vtheme'),
+        ),
+        'hierarchical' => true,
+        'show_ui'       => true,
+        'show_in_rest'  => true,
+        'rewrite'       => array(
+            'slug' => 'portfolio-category',
+        ),
     )
 );
 
