@@ -108,7 +108,7 @@ register_post_type(
 'public' => true,
 'menu_icon'=>'dashicons-groups',
 'supports' => array(
-    'text',
+    'title',
     'editor',
     'thumbnail',
 
