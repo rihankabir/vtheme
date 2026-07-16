@@ -7,78 +7,59 @@
         </div>
 
         <div class="row">
+<?php
+$member = array(
+  'post_type' => 'team',
+  'post_per_page'=> -1,
+  'order_by'=> 'menu_order',
+  'order'=> 'ASC',
+);
+$team = new WP_Query($member);
+if($team-> have_posts()): while($team->have_posts()):
+  $team->the_post();
+
+?>
+
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
+                <img src="<?php the_post_thumbnail('large',array(
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
+'class'=>'img-fluid'
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+)); ?>">
                 <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+<?php if(get_field('twitter')):?>
+                  <a href="<?php echo esc_url(get_field('twitter')); ?>"><i class="icofont-twitter"></i></a>
+<?php endif; ?>
+<?php if(get_field('facebook')): ?>
+                  <a href="<?php echo esc_url(get_field('facebook')); ?> "><i class="icofont-facebook"></i></a>
+<?php endif;?>
+<?php if(get_field('instagram')): ?>
+                  <a href="<?php echo esc_url(get_field('instagram')); ?> "><i class="icofont-instagram"></i></a>
+<?php endif;?>
+<?php if(get_field('linkedin')): ?>
+                  <a href="<?php echo esc_url(get_field('linkedin')); ?> "><i class="icofont-linkedin"></i></a>
+<?php endif;?>
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4><?php the_title(); ?></h4>
+                <span><?php echo esc_html(get_field('position')); ?> </span>
               </div>
             </div>
           </div>
+<?php
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
+endwhile;
+
+wp_reset_postdata();
+
+endif;
+
+?>
+         
 
         </div>
 
