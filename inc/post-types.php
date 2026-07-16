@@ -83,7 +83,21 @@ register_taxonomy(
         ),
     )
 );
-
+register_post_type(
+    'pricing',
+    array(
+        'labels' => array(
+            'name'          => __('Pricing', 'vtheme'),
+            'singular_name' => __('Pricing Plan', 'vtheme'),
+        ),
+        'public'       => true,
+        'menu_icon'    => 'dashicons-money-alt',
+        'supports'     => array(
+            'title',
+        ),
+        'show_in_rest' => true,
+    )
+);
 
 }
 add_action('init', 'vtheme_register_post_types');
