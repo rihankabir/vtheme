@@ -1,64 +1,94 @@
 <section id="pricing" class="pricing">
-      <div class="container">
+    <div class="container">
 
         <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Sit sint consectetur velit nemo qui impedit suscipit alias ea</p>
+            <h2>Pricing</h2>
+            <p>Choose the plan that's right for you.</p>
         </div>
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="box recommended" data-aos="zoom-in-right" data-aos-delay="200">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
+            <?php
 
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-              
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
+            $args = array(
+                'post_type'      => 'pricing',
+                'posts_per_page' => -1,
+                'order'          => 'ASC'
+            );
 
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box recommended" data-aos="zoom-in-left" data-aos-delay="200">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
+            $pricing = new WP_Query($args);
+
+            if ($pricing->have_posts()) :
+
+                while ($pricing->have_posts()) :
+
+                    $pricing->the_post();
+
+            ?>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="box <?php echo get_field('recommended') ? 'recommended' : ''; ?>">
+
+                    <h3><?php the_title(); ?></h3>
+
+                    <h4>
+
+                        <sup>$</sup>
+
+                        <?php echo esc_html(get_field('price')); ?>
+
+                        <span> / <?php echo esc_html(get_field('duration')); ?></span>
+
+                    </h4>
+
+                    <?php
+
+                    $features = explode("\n", get_field('features'));
+
+                    ?>
+
+                    <ul>
+
+                        <?php foreach ($features as $feature) : ?>
+
+                            <li>
+
+                                <?php echo esc_html(trim($feature)); ?>
+
+                            </li>
+
+                        <?php endforeach; ?>
+
+                    </ul>
+
+                    <div class="btn-wrap">
+
+                        <a
+                            href="<?php echo esc_url(get_field('button_url')); ?>"
+                            class="btn-buy">
+
+                            <?php echo esc_html(get_field('button_text')); ?>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
+
+            <?php
+
+                endwhile;
+
+                wp_reset_postdata();
+
+            endif;
+
+            ?>
 
         </div>
 
-      </div>
-    </section>
+    </div>
+</section>
