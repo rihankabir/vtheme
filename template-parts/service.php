@@ -32,14 +32,10 @@ if ( $services->have_posts() ) :
     <div class="icon-box" data-aos="fade-up" data-aos-delay="<?php echo esc_attr( $delay ); ?>">
 
         <div class="icon">
-
-            <?php
-            if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'thumbnail', array(
-                    'class' => 'img-fluid'
-                ) );
-            }
-            ?>
+<i class="<?php
+           the_field('icon');
+            ?>"></i>
+            
 
         </div>
 
