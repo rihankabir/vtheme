@@ -1,6 +1,7 @@
 <?php
 
 require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directiory() .'/inc/post-types.php';
 
 function vtheme_setup(){
 
