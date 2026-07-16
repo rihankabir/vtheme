@@ -98,6 +98,25 @@ register_post_type(
         'show_in_rest' => true,
     )
 );
+register_post_type(
+    'team',
+    array(
+     'labels' => array(
+        'name' => ('Team'),
+        'singular_name'=> ('Team Member'),
+     )   ,
+'public' => true,
+'menu_icon'=>'dashicons-groups',
+'supports' => array(
+    'text',
+    'editor',
+    'thumbnail',
+
+),
+ 'show_in_rest' => true
+    )
+);
+
 
 }
 add_action('init', 'vtheme_register_post_types');
