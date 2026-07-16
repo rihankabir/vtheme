@@ -27,7 +27,27 @@ array(
 
  );
 
-
+register_post_type(
+    'more_service',
+    array(
+        'labels' => array(
+            'name' => ('More Services'),
+            'singular_name'=> ('More Service'),
+        ),
+        'public'=> true,
+        'menu_position'=> 6,
+        'menu_icon'=> 'dashicons-hammer',
+        'supports' => array(
+            'title',
+            'editor',
+        ),
+        'has_archive'  => true,
+            'rewrite'      => array(
+                'slug' => 'services',
+            ),
+            'show_in_rest' => true,
+    )
+);
 
 
 
