@@ -48,7 +48,23 @@ register_post_type(
             'show_in_rest' => true,
     )
 );
-
+register_post_type(
+    'portfolio',
+    array(
+        'labels' => array(
+            'name'          => __('Portfolio', 'vtheme'),
+            'singular_name' => __('Portfolio Item', 'vtheme'),
+        ),
+        'public'       => true,
+        'menu_icon'    => 'dashicons-portfolio',
+        'supports'     => array(
+            'title',
+            'editor',
+            'thumbnail',
+        ),
+        'show_in_rest' => true,
+    )
+);
 
 
 }
