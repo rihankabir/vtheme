@@ -43,7 +43,7 @@ register_post_type(
         ),
         'has_archive'  => true,
             'rewrite'      => array(
-                'slug' => 'services',
+                'slug' => 'More Services',
             ),
             'show_in_rest' => true,
     )
