@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
-              <h3>Vespa</h3>
+              <h3><?php bloginfo('name'); ?></h3>
               <p><?php echo esc_html(get_theme_mod('footer_text')); ?> </p>
               <div class="social-links">
                 <a href="<?php echo esc_html(get_theme_mod('vtheme_twitter')); ?> " class="twitter"><i class="icofont-twitter"></i></a>
