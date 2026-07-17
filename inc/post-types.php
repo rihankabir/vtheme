@@ -120,7 +120,7 @@ register_post_type(
     'client',array(
         'labels' => array(
             'name' => ('Clients'),
-            'singluar_name'=>('client'),
+            'singular_name'=>('Client'),
         ),
          'public' => true,
 
