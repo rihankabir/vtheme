@@ -169,6 +169,22 @@ $wp_customize->add_control(
         'type'    => 'text',
     )
 );
+$wp_customize->add_setting(
+    'hero_button_url',
+    array(
+        'default' => '#',
+        'sanitize_callback' => 'esc_url_raw',
+    )
+);
+
+$wp_customize->add_control(
+    'hero_button_url',
+    array(
+        'label'   => 'Button URL',
+        'section' => 'vtheme_hero_section',
+        'type'    => 'url',
+    )
+);
 
 }
 
