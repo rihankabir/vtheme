@@ -153,6 +153,23 @@ $wp_customize->add_control(
         'type'    => 'textarea',
     )
 );
+$wp_customize->add_setting(
+    'hero_button_text',
+    array(
+        'default' => 'Get Started',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+
+$wp_customize->add_control(
+    'hero_button_text',
+    array(
+        'label'   => 'Button Text',
+        'section' => 'vtheme_hero_section',
+        'type'    => 'text',
+    )
+);
+
 }
 
 add_action( 'customize_register', 'vtheme_customize_register' );
