@@ -2,30 +2,51 @@
       <div class="container">
 
         <div class="row">
+          <?php
+          $brand = array(
+            'post_type' => 'client',
+            'post_per_page' => -1,
+            'orderby'=>'menu_order',
+
+'order'=>'ASC'
+          );
+          $clients = new WP_Query($brand);
+          
+          ?>
+          <?php 
+          if($clients-> have_posts(  )):while($clients-> have_posts(  )):
+            $clients-> the_post(  );
+          
+          ?>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/client-1.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-          </div>
+           <?php
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/client-2.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-          </div>
+the_post_thumbnail(
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/client-3.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-          </div>
+'large',
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/client-4.png" class="img-fluid" alt="" data-aos="zoom-in" ddata-aos-delay="100">
-          </div>
+array(
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/client-5.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-          </div>
+'class'=>'img-fluid'
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/client-6.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+)
+
+);
+
+?>
           </div>
+<?php
+
+endwhile;
+
+wp_reset_postdata();
+
+endif;
+
+?>
+      
+          
 
         </div>
 
