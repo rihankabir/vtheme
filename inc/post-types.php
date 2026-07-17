@@ -116,6 +116,29 @@ register_post_type(
  'show_in_rest' => true
     )
 );
+register_post_type(
+    'client',array(
+        'labels' => array(
+            'name' => ('Clients'),
+            'singluar_name'=>('client'),
+        ),
+         'public' => true,
+
+        'menu_icon' => 'dashicons-building',
+
+        'supports' => array(
+
+            'title',
+
+            'thumbnail'
+
+        ),
+
+        'show_in_rest' => true
+    )
+);
+
+
 
 
 }
