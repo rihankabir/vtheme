@@ -114,6 +114,13 @@ $wp_customize -> add_control(
         'type' => 'text',
     )
 );
+$wp_customize->add_section(
+    'vtheme_hero_section',
+    array(
+        'title'    => 'Hero Section',
+        'priority' => 20,
+    )
+);
 
 }
 
