@@ -121,7 +121,38 @@ $wp_customize->add_section(
         'priority' => 20,
     )
 );
+$wp_customize->add_setting(
+    'hero_title',
+    array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
 
+$wp_customize->add_control(
+    'hero_title',
+    array(
+        'label'   => 'Hero Title',
+        'section' => 'vtheme_hero_section',
+        'type'    => 'text',
+    )
+);
+$wp_customize->add_setting(
+    'hero_subtitle',
+    array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    )
+);
+
+$wp_customize->add_control(
+    'hero_subtitle',
+    array(
+        'label'   => 'Hero Subtitle',
+        'section' => 'vtheme_hero_section',
+        'type'    => 'textarea',
+    )
+);
 }
 
 add_action( 'customize_register', 'vtheme_customize_register' );
