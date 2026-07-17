@@ -128,8 +128,6 @@ register_post_type(
 
         'supports' => array(
 
-            'title',
-
             'thumbnail'
 
         ),
